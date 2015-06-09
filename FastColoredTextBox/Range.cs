@@ -215,8 +215,8 @@ namespace FastColoredTextBoxNS
 
                 int fromLine = Math.Min(end.iLine, start.iLine);
                 int toLine = Math.Max(end.iLine, start.iLine);
-                int fromChar = FromX;
-                int toChar = ToX;
+                int fromChar = FromChar;
+                int toChar = ToChar;
                 if (fromLine < 0) return null;
                 //
                 StringBuilder sb = new StringBuilder();
@@ -245,8 +245,8 @@ namespace FastColoredTextBoxNS
             //
             int fromLine = Math.Min(end.iLine, start.iLine);
             int toLine = Math.Max(end.iLine, start.iLine);
-            int fromChar = FromX;
-            int toChar = ToX;
+            int fromChar = FromChar;
+            int toChar = ToChar;
 
             StringBuilder sb = new StringBuilder((toLine - fromLine)*50);
             charIndexToPlace = new List<Place>(sb.Capacity);
@@ -317,7 +317,7 @@ namespace FastColoredTextBoxNS
         /// <summary>
         /// Return minimum of end.X and start.X
         /// </summary>
-        internal int FromX
+        public int FromChar
         {
             get
             {
@@ -330,7 +330,7 @@ namespace FastColoredTextBoxNS
         /// <summary>
         /// Return maximum of end.X and start.X
         /// </summary>
-        internal int ToX
+		public int ToChar
         {
             get
             {
@@ -748,8 +748,8 @@ namespace FastColoredTextBoxNS
             //set code to chars
             int fromLine = Math.Min(End.iLine, Start.iLine);
             int toLine = Math.Max(End.iLine, Start.iLine);
-            int fromChar = FromX;
-            int toChar = ToX;
+            int fromChar = FromChar;
+            int toChar = ToChar;
             if (fromLine < 0) return;
             //
             for (int y = fromLine; y <= toLine; y++)
@@ -978,8 +978,8 @@ namespace FastColoredTextBoxNS
             //set code to chars
             int fromLine = Math.Min(End.iLine, Start.iLine);
             int toLine = Math.Max(End.iLine, Start.iLine);
-            int fromChar = FromX;
-            int toChar = ToX;
+            int fromChar = FromChar;
+            int toChar = ToChar;
             if (fromLine < 0) return;
             //
             for (int y = fromLine; y <= toLine; y++)
@@ -1088,8 +1088,8 @@ namespace FastColoredTextBoxNS
 
             int fromLine = Math.Min(end.iLine, start.iLine);
             int toLine = Math.Max(end.iLine, start.iLine);
-            int fromChar = FromX;
-            int toChar = ToX;
+            int fromChar = FromChar;
+            int toChar = ToChar;
             if (fromLine < 0) yield break;
             //
             for (int y = fromLine; y <= toLine; y++)
@@ -1122,8 +1122,8 @@ namespace FastColoredTextBoxNS
 
                 int fromLine = Math.Min(end.iLine, start.iLine);
                 int toLine = Math.Max(end.iLine, start.iLine);
-                int fromChar = FromX;
-                int toChar = ToX;
+                int fromChar = FromChar;
+                int toChar = ToChar;
                 if (fromLine < 0) yield break;
                 //
                 for (int y = fromLine; y <= toLine; y++)

@@ -371,8 +371,8 @@ namespace FastColoredTextBoxNS
             Place end = tb.Selection.End;
             int fromLine = Math.Min(end.iLine, start.iLine);
             int toLine = Math.Max(end.iLine, start.iLine);
-            int fromChar = tb.Selection.FromX;
-            int toChar = tb.Selection.ToX;
+            int fromChar = tb.Selection.FromChar;
+            int toChar = tb.Selection.ToChar;
             if (fromLine < 0) return;
             //
             if (fromLine == toLine)
@@ -441,8 +441,8 @@ namespace FastColoredTextBoxNS
             Place end = tb.Selection.End;
             int fromLine = Math.Min(end.iLine, start.iLine);
             int toLine = Math.Max(end.iLine, start.iLine);
-            int fromChar = tb.Selection.FromX;
-            int toChar = tb.Selection.ToX;
+            int fromChar = tb.Selection.FromChar;
+            int toChar = tb.Selection.ToChar;
             if (fromLine < 0) return;
             //
             if (fromLine == toLine)
